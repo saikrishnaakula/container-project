@@ -1,0 +1,9 @@
+Bootstrap:docker
+From: nlknguyen/alpine-mpich
+
+%files
+    sample  /mnt 
+%post
+    apk add --no-cache bash
+%runscript
+	bash /mnt/streamScript.sh
